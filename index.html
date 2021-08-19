@@ -36,8 +36,10 @@
 				return decodeURIComponent(results[1].replace(/\+/g, " "));
 		}
 		const id = getParameterByName("refID");
+        if(id !== ''){
+	        document.cookie = `refID=${id}`;
+        }
 
-		document.cookie = `refID=${id}`;
     </script>
 </head>
 
